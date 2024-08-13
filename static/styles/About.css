@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+:root {
+  --light-green: #478c32;
+  --green: #4b9628;
+  --white: #fff;
+  --gray: #8390a2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+/* Navigation Bar */
+.navigationBar .logo_name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.nav ul {
+  position: fixed;
+  top: 0;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8A9A5B;
+  width:100%;
+  height:50px;
+}
+
+.navigationBar li{
+  float: left;
+
+}
+
+.navigationBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.buttonNav {
+  --b: 0.2em;   /* the thickness of the line */
+  --c: #FFFFFF; /* the color */
+  
+  color: #0000;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+.buttonNav:hover {
+  --_p: 100%;
+  --_s: .05s;
+}
+
+.buttonNav {
+  border: none;
+  background-color: rgba(240, 248, 255, 0);
+  color: #fff;
+  font-size: 16px;
+}
+
+/* About Page */
+
+body{
+  background-color:rgb(106, 145, 88);
+}
+
+.aboutTitle{
+    font-family: 'Poppins', sans-serif;
+    font-weight: 800;
+    text-align: center;
+    font-size: 50px;
+    color: #f9f9f9;
+    margin-right: 100px;
+    margin-top: 50px;
+    background-image: url('../favicons/turtle.jpg');
+    background-size: cover;
+    background-position: center;
+    
+    height: 500px;
+    width: 100%;
+    
+  }
+  
+  .aboutTitle p{
+    font-size: 14px;
+    font-weight: 500;
+    margin-left: 55%;
+    margin-right: 2%;
+    text-align: right;
+    
+  }
+  
+  .instructions {
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    font-size:20px;
+    margin-left: 30px;
+  }
+  
+  .infoIns ol li{
+    font-family: 'Poppins', sans-serif;
+    color: white;
+    font-size: 13px;
+    margin-left: 30px;
+    margin-top: 5px;
+  }
+  
+  .pic{
+    height: 194px;
+    width: 384px;
+    margin-left: 50px;
+    padding: 1px;
+    border-radius: 5px;
+  }
+  
+  .about-page {
+    width: 80%;
+    margin: 0 auto;
+    text-align: center;
+    padding: 50px 0;
+    font-family: Arial, sans-serif;
+    color: #333;
+    background-color: #f9f9f9;
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+  }
+
+  .about-text {
+    width: 80%;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2rem;
+    line-height: 1.6;
+    background-color: #fff;
+    padding: 30px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+  }

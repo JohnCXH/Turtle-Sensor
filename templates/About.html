@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    p{
+        margin-left: 20px;
+    }
+
+
+</style>
+
+    <head>
+        <title>
+            About
+        </title>
+
+        <link rel="stylesheet" href="../static/styles/About.css?v=<%= DateTime.Now.Ticks %>">
+
+
+    </head>
+
+        <div class = "aboutTitle">
+            Welcome to the Turtle Streams Website!
+
+            <p>
+                <br>&ensp; This is a streaming platform for the Turtle Hatchery
+                in Chagar Hutang, Terengganu. 
+                It makes for easier detection of the hatching rate and hatching mechanisms
+                of turtle eggs. This is through the sensors placed on top of each batch
+                of egg clutches.
+            </p>
+    
+            <p>
+                <br>&ensp; This site implements a colour detection software on the stream, to 
+                detect change in colour of the light sensors to assist researchers in 
+                determining the hatching rate of these turtles.
+            </p>
+        </div>
+
+        <div class = "nav">
+            <ul>
+              <element class = "navigationBar">
+                <li class="logo_name">Turtle Streams</li>
+                <li><a href="{{ url_for('about') }}" target = _blank><button class = "buttonNav">About</button></a></li>
+                <li><a href="{{ url_for('updates') }}" target = _blank><button class = "buttonNav">Updates</button></a></li>
+                <li><a href="{{ url_for('stream') }}" target = _blank><button class = "buttonNav">Stream</button></a></li>
+              </element>
+            </ul>
+          </div>
+
+       
+
+    <body>
+
+    </body>
+
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Updates</title>
+    <link rel="stylesheet" href="../static/styles/Updates.css?v=<%= DateTime.Now.Ticks %>">
+    <div class = "nav">
+      <ul>
+        <element class = "navigationBar">
+          <li class="logo_name">Turtle Streams</li>
+          <li><a href="{{ url_for('about') }}" target = _blank><button class = "buttonNav">About</button></a></li>
+          <li><a href="{{ url_for('updates') }}" target = _blank><button class = "buttonNav">Updates</button></a></li>
+          <li><a href="{{ url_for('stream') }}" target = _blank><button class = "buttonNav">Stream</button></a></li>
+        </element>
+      </ul>
+    </div>
+</head>
+<body>
+
+    
+    <form method = "POST">
+        <input type = "text", name = "search_query", placeholder = "Search Query" value ="{{ request.form['search_query'] }}" required>
+        </input>
+        <select name="search_column" value = "{{ request.form['column']}}" class = "selection">
+            <option value = 'bounding_box_id'>Sensor ID</option>
+            <option value = 'colour_change'>Color Detected</option>
+            <option value = 'time_changed'>Colour Change Time</option>
+        </select>
+        <input type = "submit" name = "search" value = "search"></input>
+    </form>
+
+    <h2>Search Results</h2>
+
+    {% if results | length != 0 %}
+    <table>
+        <tr><th>Sensor ID</th><th>Colour Detected</th><th>Time Changed</th></tr>
+        {% for res in results %}
+        <tr>
+        <td>{{ res[2] }}</td>
+        <td>{{ res[0] }}</td>
+        <td>{{ res[1] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    {% else %}
+    <p>No Results Found.</p>
+    {% endif %}
+    
+</body>
+</html>

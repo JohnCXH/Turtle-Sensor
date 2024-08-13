@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+
+:root {
+  --light-green: #478c32;
+  --green: #4b9628;
+  --white: #fff;
+  --gray: #8390a2;
+  background-image: url('../favicons/turtlebg.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center right;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+/*Video Placeholder*/
+.inner{
+
+  margin-top : 100px;
+  margin-left: 100px;
+
+}
+
+/* Navigation Bar */
+.navigationBar .logo_name {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--white);
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+.nav ul {
+  position: fixed;
+  top: 0;
+  list-style-type: none;
+  padding: 0;
+  overflow: hidden;
+  background-color: #8A9A5B;
+  width:100%;
+  height:50px;
+}
+
+.navigationBar li{
+  float: left;
+
+}
+
+.navigationBar li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color to #111 (black) on hover */
+.buttonNav {
+  --b: 0.2em;   /* the thickness of the line */
+  --c: #FFFFFF; /* the color */
+  
+  color: #0000;
+  padding-block: var(--b);
+  background: 
+    linear-gradient(var(--c) 50%,#000 0) 0% calc(100% - var(--_p,0%))/100% 200%,
+    linear-gradient(var(--c) 0 0) 0% var(--_p,0%)/var(--_p,0%) var(--b) no-repeat;
+  -webkit-background-clip: text,padding-box;
+          background-clip: text,padding-box;
+  transition: .3s var(--_s,0s) linear,background-size .3s calc(.3s - var(--_s,0s));
+}
+.buttonNav:hover {
+  --_p: 100%;
+  --_s: .05s;
+}
+
+.buttonNav {
+  border: none;
+  background-color: rgba(240, 248, 255, 0);
+  color: #fff;
+  font-size: 16px;
+}
+.placeholder{
+
+  background-color: #DCDCDC;
+	width:1000px;
+  height:550px;
+  margin-right: 50px
+
+}
+.child{
+
+  vertical-align: middle;
+  display: inline-block;
+
+}
+.color_selection{
+
+  color: black;
+  margin-bottom: 5px;
+
+}
+.color_selection input[type=number]{
+
+  width: 80px;
+  -moz-appearance: textfield;
+  
+
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.child input[type=submit]:hover {
+    opacity: .7;
+
+}
+
+.child input[type=submit]{
+
+  background-color: #8A9A5B;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  padding: .1em .6em;
+  border: none;
+
+}
+::marker{ display:none; } .color_selection summary{ list-style: none }
+
+.color_selection summary::-webkit-details-marker {
+
+  display:none;
+
+}
+

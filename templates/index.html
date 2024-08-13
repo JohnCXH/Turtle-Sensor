@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Index</title>
+  <link rel="stylesheet" href="../static/styles/main.css?v=<%= DateTime.Now.Ticks %>">
+  <div class = "nav">
+    <ul>
+      <element class = "navigationBar">
+        <li class="logo_name">Turtle Streams</li>
+        <li><a href="{{ url_for('about') }}" target = _blank><button class = "buttonNav">About</button></a></li>
+        <li><a href="{{ url_for('updates') }}" target = _blank><button class = "buttonNav">Updates</button></a></li>
+        <li><a href="{{ url_for('stream') }}" target = _blank><button class = "buttonNav">Stream</button></a></li>
+      </element>
+    </ul>
+  </div>
+</head>
+<body>
+  <div class = "inner">
+
+    <div class="child">
+
+          <img src=" {{url_for('video_feed')}}" class ="placeholder ">
+
+    </div>
+
+    <div class = "child">
+
+      <form action="{{ url_for('input_colour_values') }}" method="post">
+        <details class="color_selection">
+          <summary class = "red"> Change Red HSV Values</summary>
+            <label for="redlower_hue">Red Lower Hue:</label>
+            <input type="number" name="redlower_hue" required><br><br>
+            <label for="redlower_saturation">Red Lower Saturation:</label>
+            <input type="number" name="redlower_saturation" required><br><br>
+            <label for="redlower_value">Red Lower Value:</label>
+            <input type="number" name="redlower_value" required><br><br>
+            
+            <label for="redupper_hue">Red Upper Hue:</label>
+            <input type="number" name="redupper_hue" required><br><br>
+            <label for="redupper_saturation">Red Upper Saturation:</label>
+            <input type="number" name="redupper_saturation" required><br><br>
+            <label for="redupper_value">Red Upper Value:</label>
+            <input type="number" name="redupper_value" required><br><br>
+        </details>
+        
+        
+        <details class="color_selection">
+          <summary class = "yellow"> Change Yellow HSV Values</summary>
+            <label for="yellowlower_hue">Yellow Lower Hue:</label>
+            <input type="number" name="yellowlower_hue" required><br><br>
+            <label for="yellowlower_saturation">Yellow Lower Saturation:</label>
+            <input type="number" name="yellowlower_saturation" required><br><br>
+            <label for="yellowlower_value">Yellow Lower Value:</label>
+            <input type="number" name="yellowlower_value" required><br><br>
+    
+            <label for="yellowupper_hue">Yellow Upper Hue:</label>
+            <input type="number" name="yellowupper_hue" required><br><br>
+            <label for="yellowupper_saturation">Yellow Upper Saturation:</label>
+            <input type="number" name="yellowupper_saturation" required><br><br>
+            <label for="yellowupper_value">Yellow Upper Value:</label>
+            <input type="number" name="yellowupper_value" required><br><br>
+          </details>
+    
+    
+        <details class="color_selection">
+
+          <summary class = "green"> Change Green HSV Values</summary>
+            <label for="greenlower_hue">Green Lower Hue:</label>
+            <input type="number" name="greenlower_hue" required><br><br>
+            <label for="greenlower_saturation">Green Lower Saturation:</label>
+            <input type="number" name="greenlower_saturation" required><br><br>
+            <label for="greenlower_value">Green Lower Value:</label>
+            <input type="number" name="greenlower_value" required><br><br>
+      
+            <label for="greenupper_hue">Green Upper Hue:</label>
+            <input type="number" name="greenupper_hue" required><br><br>
+            <label for="greenupper_saturation">Green Upper Saturation:</label>
+            <input type="number" name="greenupper_saturation" required><br><br>
+            <label for="greenupper_value">Green Upper Value:</label>
+            <input type="number" name="greenupper_value" required><br><br>
+    
+        </details>
+
+        <input type="submit" value="Submit" >
+
+      </form>
+
+      </div>
+  </div>
+
+<script>
+  
+  //window.addEventListener("beforeunload", (event) => {
+
+    //event.returnValue = "Leaving this Page Will Stop The Python Program";
+
+  //});
+
+
+  const details = document.querySelectorAll("details");
+
+  details.forEach((targetDetail) => {
+    targetDetail.addEventListener("click", () => {
+      details.forEach((detail) => {
+        if (detail !== targetDetail) {
+          detail.removeAttribute("open");
+        }
+      });
+    });
+  });
+
+</script>
+
+
+</body>
+</html>
